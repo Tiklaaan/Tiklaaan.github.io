@@ -15,8 +15,8 @@
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let elephant = document.querySelector('#elephant-model')
-		    elephant.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
+                    let spongebob = document.querySelector('#spongebob-model')
+		    spongebob.setAttribute('animation-mixer', "clip: mixamo.com; loop: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -38,8 +38,8 @@
                 }.bind(this));
                 this.el.addEventListener('touchstart', function (e) {
 		
-                    let elephant = document.querySelector('#elephant-model')
-		  elephant.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
+                    let spongebob = document.querySelector('#spongebob-model')
+		  spongebob.setAttribute('animation-mixer', "clip: mixamo.com; loop: once;");
                     this.audio.play();
 			console.log(e)
                 }.bind(this));
@@ -51,8 +51,8 @@
 		
                 this.el.addEventListener('animation-finished', function (e) {
 			 console.log(e)
-                    let elephant = document.querySelector('#elephant-model')
-		    elephant.removeAttribute('animation-mixer');
+                    let spongebob = document.querySelector('#spongebob-model')
+		    spongebob.removeAttribute('animation-mixer');
                 }.bind(this));
 		
             }
@@ -64,11 +64,11 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="elephant" response-type="arraybuffer" src="./elephant.glb"></a-asset-item>
+        <a-asset-item id="spongebob" response-type="arraybuffer" src="./spongebob.glb"></a-asset-item>
         <audio id="eleroar" src="./eleroar.mp3"></audio>
       </a-assets>
-      <a-entity event-listener id="elephant-model"  
-        gltf-model="#elephant" 
+      <a-entity event-listener id="spongebob-model"  
+        gltf-model="#spongebob" 
         scale="0.08 0.08 0.08" 
         position = "-3 0 -3.5" 
         rotation="0 0 0" 
