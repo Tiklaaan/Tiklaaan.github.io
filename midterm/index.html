@@ -11,12 +11,12 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("#plane");
+                this.audio = document.querySelector("#eleroar");
 
                 this.el.addEventListener('click', function (e) {
 		
-                    let biplane = document.querySelector('#biplane-model')
-		    biplane.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
+                    let elephant = document.querySelector('#elephant-model')
+		    elephant.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
                     this.audio.play();
 			
                   console.log(e)
@@ -38,8 +38,8 @@
                 }.bind(this));
                 this.el.addEventListener('touchstart', function (e) {
 		
-                    let biplane = document.querySelector('#biplane-model')
-		  biplane.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
+                    let elephant = document.querySelector('#elephant-model')
+		  elephant.setAttribute('animation-mixer', "clip: Take 001; loop: once;");
                     this.audio.play();
 			console.log(e)
                 }.bind(this));
@@ -51,8 +51,8 @@
 		
                 this.el.addEventListener('animation-finished', function (e) {
 			 console.log(e)
-                    let biplane = document.querySelector('#biplane-model')
-		    biplane.removeAttribute('animation-mixer');
+                    let elephant = document.querySelector('#elephant-model')
+		    elephant.removeAttribute('animation-mixer');
                 }.bind(this));
 		
             }
@@ -64,17 +64,17 @@
   <body style="margin: 0; overflow: hidden;">
     <a-scene renderer="colorManagement: true">
        <a-assets>
-        <a-asset-item id="biplane" response-type="arraybuffer" src="./biplane.glb"></a-asset-item>
-        <audio id="plane" src="./plane.wav"></audio>
+        <a-asset-item id="elephant" response-type="arraybuffer" src="./elephant.glb"></a-asset-item>
+        <audio id="eleroar" src="./eleroar.mp3"></audio>
       </a-assets>
-      <a-entity event-listener id="biplane-model"  
-        gltf-model="#biplane" 
+      <a-entity event-listener id="elephant-model"  
+        gltf-model="#elephant" 
         scale="0.05 0.05 0.05" 
         position = "-3 0 -3.5" 
         rotation="0 0 0" 
       >
       </a-entity>
-      <a-sound src="#plane" autoplay="false"></a-sound>
+      <a-sound src="#eleroar" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
     </a-scene>
