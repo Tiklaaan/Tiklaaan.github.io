@@ -11,7 +11,7 @@
     window.onload = function() {
         AFRAME.registerComponent('event-listener', {
             init: function () {
-                this.audio = document.querySelector("#eleroar");
+                this.audio = document.querySelector("#gangnam");
 
                 this.el.addEventListener('click', function (e) {
 		
@@ -65,16 +65,16 @@
     <a-scene renderer="colorManagement: true">
        <a-assets>
         <a-asset-item id="spongebob" response-type="arraybuffer" src="./spongebob.glb"></a-asset-item>
-        <audio id="eleroar" src="./eleroar.mp3"></audio>
+        <audio id="gangnam" src="./gangnam.mp3"></audio>
       </a-assets>
       <a-entity event-listener id="spongebob-model"  
         gltf-model="#spongebob" 
-        scale="0.1 0.1 0.1" 
+        scale="0.3 0.3 0.3" 
         position = "-3 0 -3.5" 
         rotation="0 0 0" 
       >
       </a-entity>
-      <a-sound src="#eleroar" autoplay="false"></a-sound>
+      <a-sound src="#gangnam" autoplay="false"></a-sound>
       <a-entity cursor="rayOrigin:mouse"></a-entity>
       <a-entity cursor="fuse: true; fuseTimeout: 500"></a-entity>
     </a-scene>
